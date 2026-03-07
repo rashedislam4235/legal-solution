@@ -15,24 +15,43 @@
 </head>
 <body>
     <header>
-        <nav class="navbar flex gap-32 justify-around max-w-[1109.38px] mx-auto items-center mt-[50px]">
-            <div class="font-extrabold text-4xl text-[#414040] eb-garamond-font"><i class="fa-solid fa-gavel sp-icon"></i>justice</div>
-            <ul class="flex justify-around gap-[30px] text-[1rem] text-[#707070]">
-                <li class="sli poppins-thin">Home <i class="fa-solid fa-greater-than"></i></li>
-                <li class="sli poppins-thin">Services <i class="fa-solid fa-greater-than"></i></li>
-                <li class="sli poppins-thin">Cases <i class="fa-solid fa-greater-than"></i></li>
-                <li class="sli poppins-thin">Blog <i class="fa-solid fa-greater-than"></i></li>
-                <li class="sli poppins-thin">Contact Us <i class="fa-solid fa-greater-than"></i></li>
-            </ul>
-            <div>
-                <button class="text-[16px] text-amber-50 border bg-[#B68C5A] rounded-[10px] p-3">Free Consultation</button>
-            </div>
+        <nav class="navbar flex flex-col lg:flex-row gap-6 lg:gap-32 justify-between max-w-[1109.38px] mx-auto items-center mt-[50px] p-4 lg:p-0">
+   
+    <div class="font-extrabold text-4xl text-[#414040] eb-garamond-font flex items-center justify-between w-full lg:w-auto">
+        <i class="fa-solid fa-gavel sp-icon mr-2"></i>justice
+        
+        <button class="lg:hidden text-2xl" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
 
-        </nav>
-        <div class="container">
+    
+    <ul class="flex flex-col lg:flex-row justify-around gap-4 lg:gap-[30px] text-[1rem] text-[#707070] w-full lg:w-auto hidden lg:flex" id="menu">
+        <li class="sli poppins-thin">Home <i class="fa-solid fa-greater-than"></i></li>
+        <li class="sli poppins-thin">Services <i class="fa-solid fa-greater-than"></i></li>
+        <li class="sli poppins-thin">Cases <i class="fa-solid fa-greater-than"></i></li>
+        <li class="sli poppins-thin">Blog <i class="fa-solid fa-greater-than"></i></li>
+        <li class="sli poppins-thin">Contact Us <i class="fa-solid fa-greater-than"></i></li>
+    </ul>
 
-        </div>
+    
+    <div class="mt-4 lg:mt-0">
+        <button class="text-[16px] text-amber-50 border bg-[#B68C5A] rounded-[10px] p-3 w-full lg:w-auto">Free Consultation</button>
+    </div>
+</nav>
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
     </header>
+        
+
+
     
 </body>
 </html>
