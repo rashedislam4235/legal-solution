@@ -52,3 +52,10 @@ margin-bottom: 24px;
 
     
 }
+.bg-div{
+  background: url("./images/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
